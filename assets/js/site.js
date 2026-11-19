@@ -39,7 +39,7 @@
       '<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Mở menu">' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>' +
       '<nav id="main-nav" class="main-nav" aria-label="Điều hướng chính">' + links +
-      '<a class="btn btn-mint nav-cta" href="' + S.formTest + '">Kiểm tra trình độ miễn phí</a></nav>' +
+      '<a class="btn btn-mint nav-cta" href="' + S.formTest + '" target="_blank">Kiểm tra trình độ miễn phí</a></nav>' +
       '</div></header>';
     var t = document.querySelector('.menu-toggle'), nav = document.getElementById('main-nav');
     t.addEventListener('click', function () {
@@ -60,8 +60,8 @@
       '<span><b>Email:</b> <a href="mailto:' + S.email + '">' + S.email + '</a></span>' +
       socialRow('socials') + '</address>' +
       '<div class="footer-links"><strong>Bắt đầu ngay</strong>' +
-      '<a href="' + S.formTest + '">Kiểm tra trình độ miễn phí →</a>' +
-      '<a href="' + S.formTuVan + '">Đăng ký tư vấn →</a>' +
+      '<a href="' + S.formTest + '" target="_blank">Kiểm tra trình độ miễn phí →</a>' +
+      '<a href="' + S.formTuVan + '" target="_blank">Đăng ký tư vấn →</a>' +
       '<a href="beach.html">Chương trình BEACH</a></div>' +
       '</div><div class="container copyright">© ' + new Date().getFullYear() + ' ' + S.name + '</div></footer>';
   }
@@ -69,6 +69,7 @@
   /* ---------- Links to the registration pages (any element with data-form) ---------- */
   document.querySelectorAll('[data-form]').forEach(function (a) {
     a.href = a.getAttribute('data-form') === 'test' ? S.formTest : S.formTuVan;
+    a.target = '_blank';
   });
 
   /* ---------- Stats ---------- */
@@ -92,7 +93,7 @@
   if (forms.length) {
     forms.forEach(function (box) {
       var id = box.getAttribute('data-tally') === 'test' ? S.tallyTest : S.tallyTuVan;
-      box.innerHTML = '<iframe data-tally-src="https://tally.so/embed/' + id + '?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0" title="' + esc(box.getAttribute('data-title') || 'Form đăng ký') + '"></iframe>';
+      box.innerHTML = '<iframe data-tally-src="https://tally.so/r/' + id + '?transparentBackground=1" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="' + esc(box.getAttribute('data-title') || 'Form đăng ký') + '"></iframe>';
     });
     var load = function () {
       if (typeof Tally !== 'undefined') Tally.loadEmbeds();
@@ -127,7 +128,7 @@
         '<div class="panel-cols"><div class="panel-box"><h3>Bạn sẽ học gì</h3><ul class="checks">' + li(c.learn) + '</ul></div>' +
         '<div class="panel-box"><h3>Học như thế nào</h3><ul class="checks">' + li(c.how) + '</ul></div></div>' +
         '<div class="panel-foot"><div class="chips"><span>Lộ trình cá nhân hóa</span><span>Không đóng phí dài hạn</span></div>' +
-        '<a class="btn btn-dark" href="' + S.formTuVan + '">Tư vấn khóa ' + c.name + '</a></div>';
+        '<a class="btn btn-dark" href="' + S.formTuVan + '" target="_blank">Tư vấn khóa ' + c.name + '</a></div>';
     }
     app.addEventListener('click', function (e) {
       var b = e.target.closest('.beach-card'); if (!b) return;
