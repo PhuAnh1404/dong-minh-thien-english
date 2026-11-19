@@ -11,8 +11,20 @@
   ];
   var here = location.pathname.split('/').pop() || 'index.html';
   var CHECK = '<svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  var ICONS = {
+    facebook: '<path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/>',
+    tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.6 2.4 4.5 5 5"/>',
+    threads: '<path d="M16.5 11.2c-.4-2.3-2-3.6-4.3-3.6-2.6 0-4.2 1.8-4.2 4.4s1.6 4.4 4.3 4.4c2.2 0 3.6-1.2 3.6-2.9 0-1.6-1.3-2.6-3.3-2.6-1.6 0-2.7.8-2.7 2 0 1 .8 1.7 2 1.7"/><path d="M19.5 12c0 5-3 8.5-7.5 8.5S4.5 17 4.5 12 7.5 3.5 12 3.5c3.6 0 6.1 2 7 5"/>'
+  };
+  var SOCIALS = [['facebook', 'Facebook', S.facebook], ['tiktok', 'TikTok', S.tiktok], ['threads', 'Threads', S.threads]];
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function tel(n) { return 'tel:' + n.replace(/\s/g, ''); }
+  function svg(k) { return '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[k] + '</svg>'; }
+  function socialRow(cls) {
+    return '<div class="' + cls + '">' + SOCIALS.map(function (s) {
+      return '<a href="' + s[2] + '" target="_blank" rel="noopener" aria-label="' + s[1] + ' ' + S.name + '">' + svg(s[0]) + '<span>' + s[1] + '</span></a>';
+    }).join('') + '</div>';
+  }
 
   /* ---------- Header ---------- */
   var h = document.getElementById('site-header');
@@ -27,7 +39,7 @@
       '<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Mở menu">' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>' +
       '<nav id="main-nav" class="main-nav" aria-label="Điều hướng chính">' + links +
-      '<a class="btn btn-mint nav-cta" href="' + S.formTest + '" target="_blank" rel="noopener">Kiểm tra trình độ miễn phí</a></nav>' +
+      '<a class="btn btn-mint nav-cta" href="' + S.formTest + '">Kiểm tra trình độ miễn phí</a></nav>' +
       '</div></header>';
     var t = document.querySelector('.menu-toggle'), nav = document.getElementById('main-nav');
     t.addEventListener('click', function () {
@@ -45,18 +57,18 @@
       '<address><strong>Thông tin trung tâm</strong>' +
       '<span><b>Hotline:</b> ' + S.hotlines.map(function (n) { return '<a href="' + tel(n) + '">' + n + '</a>'; }).join(' - ') + '</span>' +
       '<span><b>Địa chỉ:</b> <a href="' + S.mapUrl + '" target="_blank" rel="noopener">' + S.address + '</a></span>' +
-      '<span><b>Email:</b> <a href="mailto:' + S.email + '">' + S.email + '</a></span></address>' +
+      '<span><b>Email:</b> <a href="mailto:' + S.email + '">' + S.email + '</a></span>' +
+      socialRow('socials') + '</address>' +
       '<div class="footer-links"><strong>Bắt đầu ngay</strong>' +
-      '<a href="' + S.formTest + '" target="_blank" rel="noopener">Kiểm tra trình độ miễn phí →</a>' +
-      '<a href="' + S.formTuVan + '" target="_blank" rel="noopener">Đăng ký tư vấn →</a>' +
-      '<a href="' + S.facebook + '" target="_blank" rel="noopener">Facebook</a></div>' +
+      '<a href="' + S.formTest + '">Kiểm tra trình độ miễn phí →</a>' +
+      '<a href="' + S.formTuVan + '">Đăng ký tư vấn →</a>' +
+      '<a href="beach.html">Chương trình BEACH</a></div>' +
       '</div><div class="container copyright">© ' + new Date().getFullYear() + ' ' + S.name + '</div></footer>';
   }
 
-  /* ---------- Links to forms (any element with data-form) ---------- */
+  /* ---------- Links to the registration pages (any element with data-form) ---------- */
   document.querySelectorAll('[data-form]').forEach(function (a) {
     a.href = a.getAttribute('data-form') === 'test' ? S.formTest : S.formTuVan;
-    a.target = '_blank'; a.rel = 'noopener';
   });
 
   /* ---------- Stats ---------- */
@@ -72,23 +84,41 @@
     if (k === 'hotline') el.innerHTML = S.hotlines.map(function (n) { return '<a href="' + tel(n) + '">' + n + '</a>'; }).join(' &nbsp;-&nbsp; ');
     if (k === 'address') el.innerHTML = '<a href="' + S.mapUrl + '" target="_blank" rel="noopener">' + S.address + '</a>';
     if (k === 'email') el.innerHTML = '<a href="mailto:' + S.email + '">' + S.email + '</a>';
-    if (k === 'facebook') el.innerHTML = '<a href="' + S.facebook + '" target="_blank" rel="noopener">' + S.name + '</a>';
+    if (k === 'socials') el.innerHTML = socialRow('socials big');
   });
 
-  /* ---------- BEACH tabs ---------- */
+  /* ---------- Embedded Tally forms ---------- */
+  var forms = document.querySelectorAll('[data-tally]');
+  if (forms.length) {
+    forms.forEach(function (box) {
+      var id = box.getAttribute('data-tally') === 'test' ? S.tallyTest : S.tallyTuVan;
+      box.innerHTML = '<iframe data-tally-src="https://tally.so/embed/' + id + '?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0" title="' + esc(box.getAttribute('data-title') || 'Form đăng ký') + '"></iframe>';
+    });
+    var load = function () {
+      if (typeof Tally !== 'undefined') Tally.loadEmbeds();
+      else document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function (e) { e.src = e.dataset.tallySrc; });
+    };
+    var sc = document.createElement('script');
+    sc.src = 'https://tally.so/widgets/embed.js'; sc.onload = load; sc.onerror = load;
+    document.body.appendChild(sc);
+  }
+
+  /* ---------- BEACH blocks ---------- */
   var app = document.getElementById('beach-app');
   if (app) {
     var C = window.COURSES;
     var start = Math.max(0, C.findIndex(function (c) { return '#' + c.letter.toLowerCase() === location.hash; }));
-    var tabs = C.map(function (c, i) {
-      return '<button type="button" role="tab" class="beach-tab b-' + c.letter + '" id="tab-' + c.letter + '" aria-controls="beach-panel" data-i="' + i + '">' +
-        '<span class="letter">' + c.letter + '</span><span class="tab-text"><span class="tab-name">' + c.name + '</span><span class="tab-desc">' + esc(c.desc) + '</span></span></button>';
+    var cards = C.map(function (c, i) {
+      return '<button type="button" role="tab" class="beach-card b-' + c.letter + '" id="tab-' + c.letter + '" aria-controls="beach-panel" data-i="' + i + '">' +
+        '<span class="bc-letter">' + c.letter + '</span><span class="bc-name">' + c.name + '</span><span class="bc-short">' + esc(c.short) + '</span>' +
+        '<span class="bc-more">Xem chi tiết <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>';
     }).join('');
-    app.innerHTML = '<div class="beach-tabs" role="tablist" aria-label="Các chương trình BEACH">' + tabs + '</div><div class="beach-panel" id="beach-panel" role="tabpanel"></div>';
+    app.innerHTML = '<div class="beach-cards" role="tablist" aria-label="Các chương trình BEACH">' + cards + '</div><div class="beach-panel" id="beach-panel" role="tabpanel"></div>';
     var panel = document.getElementById('beach-panel');
     function show(i) {
       var c = C[i];
-      app.querySelectorAll('.beach-tab').forEach(function (b, j) { b.setAttribute('aria-selected', j === i ? 'true' : 'false'); b.tabIndex = j === i ? 0 : -1; });
+      app.querySelectorAll('.beach-card').forEach(function (b, j) { b.setAttribute('aria-selected', j === i ? 'true' : 'false'); b.tabIndex = j === i ? 0 : -1; });
+      panel.className = 'beach-panel p-' + c.letter;
       panel.setAttribute('aria-labelledby', 'tab-' + c.letter);
       var li = function (arr) { return arr.map(function (x) { return '<li>' + CHECK + '<span>' + esc(x) + '</span></li>'; }).join(''); };
       panel.innerHTML =
@@ -96,28 +126,30 @@
         '<p class="muted"><strong class="ink">Dành cho:</strong> ' + esc(c.forWho) + '</p>' +
         '<div class="panel-cols"><div class="panel-box"><h3>Bạn sẽ học gì</h3><ul class="checks">' + li(c.learn) + '</ul></div>' +
         '<div class="panel-box"><h3>Học như thế nào</h3><ul class="checks">' + li(c.how) + '</ul></div></div>' +
-        '<div class="panel-foot"><div class="chips"><span>Sĩ số dưới 10</span><span>Lộ trình cá nhân hóa</span><span>Không đóng phí dài hạn</span></div>' +
-        '<a class="btn btn-dark" href="' + S.formTuVan + '" target="_blank" rel="noopener">Tư vấn khóa ' + c.name + '</a></div>';
+        '<div class="panel-foot"><div class="chips"><span>Lộ trình cá nhân hóa</span><span>Không đóng phí dài hạn</span></div>' +
+        '<a class="btn btn-dark" href="' + S.formTuVan + '">Tư vấn khóa ' + c.name + '</a></div>';
     }
     app.addEventListener('click', function (e) {
-      var b = e.target.closest('.beach-tab'); if (!b) return;
+      var b = e.target.closest('.beach-card'); if (!b) return;
       var i = +b.getAttribute('data-i'); show(i);
       history.replaceState(null, '', '#' + C[i].letter.toLowerCase());
+      if (window.innerWidth < 900) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     app.addEventListener('keydown', function (e) {
-      var b = e.target.closest('.beach-tab'); if (!b) return;
+      var b = e.target.closest('.beach-card'); if (!b) return;
       var i = +b.getAttribute('data-i'), n = null;
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % C.length;
       if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i + C.length - 1) % C.length;
-      if (n !== null) { e.preventDefault(); show(n); app.querySelectorAll('.beach-tab')[n].focus(); }
+      if (n !== null) { e.preventDefault(); show(n); app.querySelectorAll('.beach-card')[n].focus(); }
     });
     show(start);
   }
 
-  /* ---------- Students ---------- */
+  /* ---------- Students (sorted by IELTS, high to low) ---------- */
   var st = document.getElementById('students');
   if (st) {
-    st.innerHTML = window.STUDENTS.map(function (s) {
+    var list = window.STUDENTS.slice().sort(function (a, b) { return parseFloat(b.ielts) - parseFloat(a.ielts); });
+    st.innerHTML = list.map(function (s) {
       var w = s.name.trim().split(/\s+/), ini = (w.length > 1 ? w[w.length - 2][0] : '') + w[w.length - 1][0];
       return '<li class="student"><div class="student-top"><span class="avatar" aria-hidden="true">' + esc(ini.toUpperCase()) + '</span>' +
         '<span class="score"><small>IELTS</small>' + esc(s.ielts) + '</span></div>' +

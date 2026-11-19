@@ -22,13 +22,13 @@ body { margin: 0; font-family: var(--body); color: var(--ink); background: var(-
 img { max-width: 100%; display: block; }
 a { color: var(--dark); }
 a:hover { color: var(--dark-2); }
-h1, h2, h3 { font-family: var(--head); line-height: 1.1; margin: 0; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--head); line-height: 1.25; margin: 0; text-wrap: balance; letter-spacing: .01em; }
 p { margin: 0; text-wrap: pretty; }
 .container { width: min(1280px, 100% - 48px); margin-inline: auto; }
 .muted { color: var(--muted); }
 .ink { color: var(--ink); }
 .eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--dark); margin: 0 0 10px; }
-.page-title { font-weight: 900; font-size: clamp(32px, 4vw, 46px); letter-spacing: -1px; }
+.page-title { font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); letter-spacing: .02em; word-spacing: .06em; line-height: 1.22; }
 .ico { width: 22px; height: 22px; flex: 0 0 22px; fill: none; stroke: var(--dark); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
 :focus-visible { outline: 3px solid var(--dark); outline-offset: 3px; }
 
@@ -64,13 +64,13 @@ p { margin: 0; text-wrap: pretty; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); width: 100%; }
 .hero-text { padding: 56px 40px 48px max(24px, calc((100vw - 1280px) / 2)); display: flex; flex-direction: column; justify-content: center; gap: 22px; }
 .pill { align-self: flex-start; background: #fff; color: var(--dark); border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 700; }
-.hero h1 { font-weight: 900; font-size: clamp(44px, 6vw, 78px); line-height: 1; letter-spacing: -2px; }
+.hero h1 { font-weight: 800; font-size: clamp(42px, 5.6vw, 72px); line-height: 1.14; letter-spacing: .02em; word-spacing: .06em; }
 .hero h1 mark { background: var(--mint); color: var(--dark); border-radius: 16px; padding: 0 14px; }
 .hero-sub { font-size: clamp(18px, 1.8vw, 22px); font-weight: 600; }
 .hero-lead { font-size: 17px; color: var(--muted); max-width: 580px; }
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; padding-top: 22px; border-top: 1px solid #C3DEDA; }
 .stat { display: flex; flex-direction: column; gap: 4px; }
-.stat-value { font-family: var(--head); font-weight: 900; font-size: 34px; color: var(--dark); letter-spacing: -.5px; line-height: 1.1; }
+.stat-value { font-family: var(--head); font-weight: 800; font-size: 32px; color: var(--dark); letter-spacing: .02em; line-height: 1.15; }
 .stat-label { font-size: 13px; color: var(--muted); line-height: 1.4; }
 .beach-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--muted); }
 .beach-chips a { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--head); font-weight: 800; font-size: 19px; text-decoration: none; color: var(--ink); }
@@ -107,7 +107,7 @@ p { margin: 0; text-wrap: pretty; }
 .tab-desc { font-size: 13.5px; line-height: 1.35; color: var(--muted); }
 .beach-panel { background: #fff; border-radius: 28px; padding: 32px 36px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 14px 36px rgba(27,84,80,.10); }
 .panel-head { display: flex; align-items: center; gap: 18px; }
-.panel-head h2 { font-weight: 900; font-size: 32px; letter-spacing: -.5px; }
+.panel-head h2 { font-weight: 800; font-size: 30px; letter-spacing: .03em; line-height: 1.2; }
 .panel-desc { font-size: 18px; font-weight: 600; color: var(--dark); margin-top: 4px; }
 .panel-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .panel-box { background: var(--light); border-radius: 20px; padding: 22px 24px; }
@@ -121,10 +121,10 @@ p { margin: 0; text-wrap: pretty; }
 /* Teacher page */
 .split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr); width: 100%; }
 .split-text { padding: 48px max(24px, calc((100vw - 1280px) / 2)) 48px 56px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
-.split-text h1 { font-weight: 900; font-size: clamp(40px, 4.4vw, 58px); letter-spacing: -1.5px; }
+.split-text h1 { font-weight: 800; font-size: clamp(38px, 4.2vw, 54px); letter-spacing: .02em; word-spacing: .06em; line-height: 1.18; }
 .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .tile { background: #fff; border-radius: 18px; padding: 18px 20px; }
-.tile b { display: block; font-family: var(--head); font-weight: 900; font-size: 32px; color: var(--dark); letter-spacing: -.5px; line-height: 1.1; }
+.tile b { display: block; font-family: var(--head); font-weight: 800; font-size: 30px; color: var(--dark); letter-spacing: .02em; line-height: 1.15; }
 .tile span { font-size: 13px; color: var(--muted); }
 .checks.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; }
 
@@ -157,7 +157,7 @@ p { margin: 0; text-wrap: pretty; }
 .teacher-photo { flex: 0 0 280px; position: relative; background: var(--mint); min-height: 460px; overflow: hidden; }
 .teacher-photo img { position: absolute; left: 50%; bottom: 0; transform: translateX(-46%); height: 95%; width: auto; max-width: none; }
 .teacher-body { padding: 30px 32px; display: flex; flex-direction: column; gap: 14px; }
-.teacher-body h2 { font-weight: 900; font-size: 30px; letter-spacing: -.5px; }
+.teacher-body h2 { font-weight: 800; font-size: 28px; letter-spacing: .02em; line-height: 1.2; }
 .role { align-self: flex-start; border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 700; }
 .role.main { background: var(--dark); color: #fff; } .role.sub { background: var(--light); color: var(--dark); }
 .teacher.simple { flex-direction: column; padding: 30px 32px; gap: 14px; }
@@ -188,7 +188,7 @@ p { margin: 0; text-wrap: pretty; }
 .contact-value { font-size: 17px; font-weight: 600; }
 .contact-value a { color: var(--ink); }
 .contact-cta { background: var(--dark); color: #fff; padding: 48px max(24px, calc((100vw - 1280px) / 2)) 48px 56px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
-.slogan { font-family: var(--head); font-weight: 900; font-size: 40px; line-height: 1.05; letter-spacing: -1px; }
+.slogan { font-family: var(--head); font-weight: 800; font-size: 38px; line-height: 1.18; letter-spacing: .02em; }
 .skills { display: flex; flex-wrap: wrap; gap: 8px; }
 .skills span { background: rgba(255,255,255,.14); border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 600; }
 .cta-card { border-radius: 22px; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; color: var(--ink); }
@@ -248,3 +248,68 @@ p { margin: 0; text-wrap: pretty; }
 /* Nền xanh nhạt có điểm nhấn nhẹ */
 .hero-text, .split-text, .contact-info { background: radial-gradient(circle at 15% 20%, rgba(255,255,255,.65), rgba(255,255,255,0) 45%), var(--bg); }
 .student, .beach-tab, .card, .highlight, .stat-cards .stat, .teacher { box-shadow: 0 8px 22px rgba(27,84,80,.08); }
+
+/* ---------- BEACH: 5 khối màu ---------- */
+:root { --cB: #F6A193; --cE: #F7C95C; --cA: #8FD08C; --cC: #7DC4EA; --cH: #C3A2E6; }
+.b-B .letter, .letter.b-B, .beach-chips .b-B { background: var(--cB); color: var(--ink); }
+.b-E .letter, .letter.b-E, .beach-chips .b-E { background: var(--cE); color: var(--ink); }
+.b-A .letter, .letter.b-A, .beach-chips .b-A { background: var(--cA); color: var(--ink); }
+.b-C .letter, .letter.b-C, .beach-chips .b-C { background: var(--cC); color: var(--ink); }
+.b-H .letter, .letter.b-H, .beach-chips .b-H { background: var(--cH); color: var(--ink); }
+.beach-app { display: flex; flex-direction: column; gap: 24px; }
+.beach-cards { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.beach-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-height: 190px; padding: 20px 20px 18px; border: 3px solid transparent; border-radius: 26px; cursor: pointer; font-family: inherit; text-align: left; color: var(--ink); box-shadow: 0 10px 24px rgba(27,84,80,.12); transition: transform .18s, box-shadow .18s, border-color .18s; }
+.beach-card.b-B { background: var(--cB); } .beach-card.b-E { background: var(--cE); } .beach-card.b-A { background: var(--cA); } .beach-card.b-C { background: var(--cC); } .beach-card.b-H { background: var(--cH); }
+.beach-card:hover { transform: translateY(-6px); box-shadow: 0 18px 32px rgba(27,84,80,.20); }
+.beach-card[aria-selected="true"] { border-color: var(--ink); transform: translateY(-6px); box-shadow: 0 18px 32px rgba(27,84,80,.25); }
+.bc-letter { font-family: var(--head); font-weight: 800; font-size: 64px; line-height: 1; }
+.bc-name { font-family: var(--head); font-weight: 800; font-size: 18px; letter-spacing: .06em; margin-top: 4px; }
+.bc-short { font-size: 14px; font-weight: 600; opacity: .85; }
+.bc-more { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.75); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 700; }
+.bc-more svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.beach-card[aria-selected="true"] .bc-more { background: var(--ink); color: #fff; }
+.beach-panel { border-top: 8px solid var(--mint); }
+.beach-panel.p-B { border-top-color: var(--cB); } .beach-panel.p-E { border-top-color: var(--cE); } .beach-panel.p-A { border-top-color: var(--cA); } .beach-panel.p-C { border-top-color: var(--cC); } .beach-panel.p-H { border-top-color: var(--cH); }
+
+/* ---------- Thầy Thiện: các ô thông tin đều nhau ---------- */
+.cred-grid { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 12px; }
+.cred-grid li { display: flex; align-items: center; gap: 12px; background: #fff; border-radius: 16px; padding: 14px 16px; font-size: 15px; line-height: 1.45; box-shadow: 0 6px 16px rgba(27,84,80,.07); }
+
+/* ---------- Thành tích: 4 con số ---------- */
+.highlights[data-stats] { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: -8px 0 26px; }
+.highlights .stat { flex-direction: row; align-items: center; gap: 14px; background: #fff; border-radius: 18px; padding: 14px 18px; box-shadow: 0 8px 22px rgba(27,84,80,.08); }
+.highlights .stat-value { font-size: 28px; flex: 0 0 auto; }
+.highlights .stat-label { font-size: 13.5px; }
+
+/* ---------- Mạng xã hội ---------- */
+.socials { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.socials a { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 999px; background: #fff; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14px; }
+.socials a:hover { background: var(--mint); }
+.socials svg { width: 18px; height: 18px; fill: none; stroke: var(--dark); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.socials.big a { background: var(--light); min-height: 44px; font-size: 15px; }
+
+/* ---------- Trang đăng ký (form nhúng) ---------- */
+.form-page { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 40px; align-items: start; }
+.form-intro { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
+.form-intro .btn { align-self: flex-start; }
+.contact-mini { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+.contact-mini a { color: var(--ink); }
+.form-card { background: #fff; border-radius: 28px; padding: 28px 30px; box-shadow: 0 14px 36px rgba(27,84,80,.10); min-height: 420px; }
+.form-card iframe { display: block; border: 0; }
+
+@media (max-width: 1180px) {
+  .beach-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .highlights[data-stats] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .form-page { grid-template-columns: 1fr; }
+  .form-intro { position: static; }
+  .cred-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+}
+@media (max-width: 520px) {
+  .beach-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .beach-card { min-height: 160px; padding: 16px; }
+  .bc-letter { font-size: 48px; }
+  .highlights[data-stats] { grid-template-columns: 1fr; }
+  .form-card { padding: 18px 14px; }
+}
