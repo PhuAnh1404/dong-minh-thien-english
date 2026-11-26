@@ -529,3 +529,18 @@ body { background: var(--bg); }
 .student.s80 .avatar { background: #F0DCA6; color: var(--gold-ink); }
 .student.s75 .avatar { background: #EEC6B8; color: #7A3121; }
 .student.s70 .avatar { background: #BFD8E6; color: #1C4A62; }
+
+/* BEACH: trở lại bộ màu pastel ban đầu (hồng · vàng · xanh lá · xanh dương · tím) */
+.beach-card.b-B { background: var(--cB); } .beach-card.b-E { background: var(--cE); } .beach-card.b-A { background: var(--cA); }
+.beach-card.b-C { background: var(--cC); color: var(--ink); } .beach-card.b-H { background: var(--cH); color: var(--ink); }
+.beach-card.b-C .bc-more, .beach-card.b-H .bc-more { background: rgba(27,84,80,.12); color: var(--ink); }
+.beach-card.b-C[aria-selected="true"], .beach-card.b-H[aria-selected="true"] { border-color: var(--ink); }
+.beach-card.b-C[aria-selected="true"] .bc-more, .beach-card.b-H[aria-selected="true"] .bc-more { background: var(--ink); color: #fff; }
+.b-B .letter, .letter.b-B, .beach-chips .b-B { background: var(--cB); color: var(--ink); }
+.b-E .letter, .letter.b-E, .beach-chips .b-E { background: var(--cE); color: var(--ink); }
+.b-A .letter, .letter.b-A, .beach-chips .b-A { background: var(--cA); color: var(--ink); }
+.b-C .letter, .letter.b-C, .beach-chips .b-C { background: var(--cC); color: var(--ink); }
+.b-H .letter, .letter.b-H, .beach-chips .b-H { background: var(--cH); color: var(--ink); }
+.beach-panel.p-B { border-top-color: var(--cB); } .beach-panel.p-E { border-top-color: var(--cE); } .beach-panel.p-A { border-top-color: var(--cA); }
+.beach-panel.p-C { border-top-color: var(--cC); } .beach-panel.p-H { border-top-color: var(--cH); }
+.beach-panel { border-top-width: 8px; border-top-style: solid; }
