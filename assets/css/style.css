@@ -680,3 +680,16 @@ body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(1) .num { background: var(--pk-d); }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(2) .num { background: var(--yl-d); }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(3) .num { background: var(--gr-d); }
+
+/* =========================================================
+   CHỐT PHƯƠNG ÁN C: Thành tích & Vì sao chọn = kem + mint đậm
+   ========================================================= */
+.stat-cards .stat:nth-child(n), .highlights .stat:nth-child(n) { background: #A6D0CF; border: 0; box-shadow: 0 8px 22px rgba(31,59,56,.08); }
+.stat-cards .stat:nth-child(n) .stat-value, .highlights .stat:nth-child(n) .stat-value { background: #7FBAB5; color: #16302E; }
+.stat-cards .stat:nth-child(n) .stat-label, .highlights .stat:nth-child(n) .stat-label { color: #1F3B38; }
+.student, .student.s80, .student.s75, .student.s70 { background: #F6F1E7; border-color: #E4DACA; }
+.student .score, .student.s80 .score, .student.s75 .score, .student.s70 .score { background: #1B5450; color: #fff; }
+.student .avatar, .student.s80 .avatar, .student.s75 .avatar, .student.s70 .avatar { background: #A6D0CF; color: #1F3B38; }
+.why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: #F6F1E7; border-color: #E4DACA; }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: #1B5450; color: #fff; }
+.why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #E4DACA; }
