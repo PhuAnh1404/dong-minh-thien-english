@@ -667,3 +667,16 @@ body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: var(--pu-t); border-color: var(--pu); }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: var(--pk-d); color: var(--ink); }
 .why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #DDD0EC; }
+
+/* Hàng số liệu: 4 màu BEACH (hồng · vàng · xanh lá · xanh dương); thẻ học viên giữ tím */
+.stat-cards .stat:nth-child(1), .highlights .stat:nth-child(1) { background: var(--pk); }
+.stat-cards .stat:nth-child(2), .highlights .stat:nth-child(2) { background: var(--yl); }
+.stat-cards .stat:nth-child(3), .highlights .stat:nth-child(3) { background: var(--gr); }
+.stat-cards .stat:nth-child(4), .highlights .stat:nth-child(4) { background: var(--bl); }
+.stat-cards .stat:nth-child(1) .stat-value, .highlights .stat:nth-child(1) .stat-value { background: var(--pk-d); }
+.stat-cards .stat:nth-child(2) .stat-value, .highlights .stat:nth-child(2) .stat-value { background: var(--yl-d); }
+.stat-cards .stat:nth-child(3) .stat-value, .highlights .stat:nth-child(3) .stat-value { background: var(--gr-d); }
+.stat-cards .stat:nth-child(4) .stat-value, .highlights .stat:nth-child(4) .stat-value { background: var(--bl-d); }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(1) .num { background: var(--pk-d); }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(2) .num { background: var(--yl-d); }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(3) .num { background: var(--gr-d); }
