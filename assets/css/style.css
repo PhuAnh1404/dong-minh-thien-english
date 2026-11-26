@@ -653,3 +653,17 @@ body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: var(--cont-bg); border-color: var(--cont-line); }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: var(--dark); color: #fff; }
 .why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: var(--cont-line); }
+
+/* =========================================================
+   CHỐT: Thành tích & Vì sao chọn chỉ 2 màu BEACH
+   số liệu = hồng (B) · nội dung = tím (H)
+   ========================================================= */
+.stat-cards .stat:nth-child(n), .highlights .stat:nth-child(n) { background: var(--pk); border: 0; }
+.stat-cards .stat:nth-child(n) .stat-value, .highlights .stat:nth-child(n) .stat-value { background: var(--pk-d); color: var(--ink); }
+.stat-cards .stat:nth-child(n) .stat-label, .highlights .stat:nth-child(n) .stat-label { color: #3A4442; }
+.student, .student.s80, .student.s75, .student.s70 { background: var(--pu-t); border-color: var(--pu); }
+.student .score, .student.s80 .score, .student.s75 .score, .student.s70 .score { background: var(--pu-d); color: var(--ink); }
+.student .avatar, .student.s80 .avatar, .student.s75 .avatar, .student.s70 .avatar { background: var(--pu); color: var(--ink); }
+.why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: var(--pu-t); border-color: var(--pu); }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: var(--pk-d); color: var(--ink); }
+.why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #DDD0EC; }
