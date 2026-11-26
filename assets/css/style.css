@@ -634,3 +634,22 @@ body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: var(--bl-t); border-color: #C9DFEB; }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: var(--bl-d); color: var(--ink); }
 .why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #C2D8E3; }
+
+/* Khung chi tiết BEACH dài bằng hàng 5 khối */
+.beach-app { align-items: stretch; }
+.beach-panel { width: 100%; box-sizing: border-box; }
+
+/* =========================================================
+   Thành tích & Vì sao chọn: cặp màu ấm hợp nền mint
+   nội dung = kem · con số = đào nhạt · điểm nhấn = xanh đậm
+   ========================================================= */
+:root { --num-bg: #F6D7CB; --num-pill: #EDB7A4; --num-text: #3B2A25; --cont-bg: #F6F1E7; --cont-line: #E4DACA; }
+.stat-cards .stat:nth-child(n), .highlights .stat:nth-child(n) { background: var(--num-bg); border: 0; }
+.stat-cards .stat:nth-child(n) .stat-value, .highlights .stat:nth-child(n) .stat-value { background: var(--num-pill); color: var(--num-text); }
+.stat-cards .stat:nth-child(n) .stat-label, .highlights .stat:nth-child(n) .stat-label { color: #4A3B36; }
+.student, .student.s80, .student.s75, .student.s70 { background: var(--cont-bg); border-color: var(--cont-line); }
+.student .score, .student.s80 .score, .student.s75 .score, .student.s70 .score { background: var(--dark); color: #fff; }
+.student .avatar, .student.s80 .avatar, .student.s75 .avatar, .student.s70 .avatar { background: var(--mint); color: var(--ink); }
+.why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: var(--cont-bg); border-color: var(--cont-line); }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: var(--dark); color: #fff; }
+.why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: var(--cont-line); }
