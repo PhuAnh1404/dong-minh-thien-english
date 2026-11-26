@@ -485,3 +485,47 @@ body { background: var(--bg); }
 .contact-ico { background: var(--card); border: 1px solid var(--card-line); }
 
 @media (max-width: 1180px) { .main-nav { background: var(--bg); } }
+
+/* =========================================================
+   MÀU PHỐI THÊM cho trang Vì sao chọn & Thành tích
+   xanh đậm · đất nung · xanh đại dương · vàng cát
+   ========================================================= */
+:root {
+  --teal: #1B5450;  --teal-soft: #AED6D2;
+  --coral: #B4553F; --coral-soft: #F4CFC3; --coral-tint: #F5E3DB;
+  --ocean: #2F6E8F; --ocean-soft: #C3DFEE; --ocean-tint: #DDEBF2;
+  --gold: #E2B34E;  --gold-soft: #FFF1CC;  --gold-tint: #F7EBCD; --gold-ink: #3D2C08; --gold-dark: #8E6411;
+}
+/* 4 ô số liệu: mỗi ô một màu (8.5 · 70% · 10+ · 80%) */
+.stat-cards .stat:nth-child(1), .highlights .stat:nth-child(1) { background: var(--teal); }
+.stat-cards .stat:nth-child(2), .highlights .stat:nth-child(2) { background: var(--coral); }
+.stat-cards .stat:nth-child(3), .highlights .stat:nth-child(3) { background: var(--ocean); }
+.stat-cards .stat:nth-child(4), .highlights .stat:nth-child(4) { background: var(--gold); }
+.stat-cards .stat:nth-child(1) .stat-value, .highlights .stat:nth-child(1) .stat-value { background: var(--teal-soft); color: var(--teal); }
+.stat-cards .stat:nth-child(2) .stat-value, .highlights .stat:nth-child(2) .stat-value { background: var(--coral-soft); color: #7A3121; }
+.stat-cards .stat:nth-child(3) .stat-value, .highlights .stat:nth-child(3) .stat-value { background: var(--ocean-soft); color: #1C4A62; }
+.stat-cards .stat:nth-child(4) .stat-value, .highlights .stat:nth-child(4) .stat-value { background: var(--gold-soft); color: var(--gold-ink); }
+.stat-cards .stat:nth-child(1) .stat-label, .highlights .stat:nth-child(1) .stat-label,
+.stat-cards .stat:nth-child(2) .stat-label, .highlights .stat:nth-child(2) .stat-label,
+.stat-cards .stat:nth-child(3) .stat-label, .highlights .stat:nth-child(3) .stat-label { color: #F6F1E8; }
+.stat-cards .stat:nth-child(4) .stat-label, .highlights .stat:nth-child(4) .stat-label { color: var(--gold-ink); }
+
+/* Vì sao chọn: hai khung có màu riêng */
+.why-grid .card:nth-of-type(2) { background: var(--coral-tint); border-color: #EBCFC3; }
+.why-grid .card:nth-of-type(3) { background: var(--ocean-tint); border-color: #C9DDE8; }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(1) .num { background: var(--teal); color: #fff; }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(2) .num { background: var(--coral); color: #fff; }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(3) .num { background: var(--gold); color: var(--gold-ink); }
+.why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #C2D8E3; }
+.why-grid .card:nth-of-type(3) .compare .val { color: var(--ocean); }
+
+/* Thành tích: màu thẻ theo điểm IELTS */
+.student.s80 { background: var(--gold-tint); border-color: #EBDAB0; }
+.student.s75 { background: var(--coral-tint); border-color: #EBCFC3; }
+.student.s70 { background: var(--ocean-tint); border-color: #C9DDE8; }
+.student.s80 .score { background: var(--gold-dark); }
+.student.s75 .score { background: var(--coral); }
+.student.s70 .score { background: var(--ocean); }
+.student.s80 .avatar { background: #F0DCA6; color: var(--gold-ink); }
+.student.s75 .avatar { background: #EEC6B8; color: #7A3121; }
+.student.s70 .avatar { background: #BFD8E6; color: #1C4A62; }

@@ -154,7 +154,8 @@
     var list = window.STUDENTS.slice().sort(function (a, b) { return parseFloat(b.ielts) - parseFloat(a.ielts); });
     st.innerHTML = list.map(function (s) {
       var w = s.name.trim().split(/\s+/), ini = (w.length > 1 ? w[w.length - 2][0] : '') + w[w.length - 1][0];
-      return '<li class="student"><div class="student-top"><span class="avatar" aria-hidden="true">' + esc(ini.toUpperCase()) + '</span>' +
+      var lv = parseFloat(s.ielts) >= 8 ? 's80' : (parseFloat(s.ielts) >= 7.5 ? 's75' : 's70');
+      return '<li class="student ' + lv + '"><div class="student-top"><span class="avatar" aria-hidden="true">' + esc(ini.toUpperCase()) + '</span>' +
         '<span class="score"><small>IELTS</small>' + esc(s.ielts) + '</span></div>' +
         '<h3>' + esc(s.name) + '</h3><p>' + esc(s.job) + '</p></li>';
     }).join('');
