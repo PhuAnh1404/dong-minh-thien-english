@@ -412,3 +412,76 @@ p { margin: 0; text-wrap: pretty; }
 /* Viền ô BEACH theo màu khóa */
 .beach-panel { border-top-width: 8px; }
 @media (min-width: 1181px) { .why-grid { grid-template-columns: minmax(300px, .9fr) minmax(0, 1.3fr) minmax(320px, 1fr); } }
+
+/* =========================================================
+   BỘ MÀU "BIỂN & CÁT" – nền cát dịu, khung xanh biển nhạt,
+   điểm nhấn xanh đậm thương hiệu. (Ghi đè các phần màu ở trên)
+   ========================================================= */
+:root {
+  --bg: #F3EFE6;          /* nền cát nhạt */
+  --bg-2: #EAE3D5;
+  --card: #E2ECE9;        /* khung xanh biển nhạt */
+  --card-2: #F3EFE6;      /* ô bên trong khung: màu cát */
+  --card-line: #CFDDD9;
+  --ink: #1F3B38;
+  --muted: #52605D;
+  --line: #CFDDD9;
+  --sea1: #D3E8E5; --sea2: #AED6D2; --sea3: #84BFBA; --sea4: #4C928D; --sea5: #1B5450;
+}
+body { background: var(--bg); }
+.site-header { background: rgba(243,239,230,.95); border-bottom: 1px solid #E2DACA; }
+.main-nav a:hover { background: var(--card); }
+.menu-toggle { background: var(--card); }
+.hero-text, .split-text, .contact-info { background: var(--bg); }
+
+/* Khung nội dung */
+.card, .student, .teacher, .cred-grid li, .tile, .beach-panel, .highlight, .teacher.simple {
+  background: var(--card); border: 1px solid var(--card-line); box-shadow: 0 6px 20px rgba(31,59,56,.06);
+}
+.panel-box, .chips span, .avatar, .role.sub { background: var(--card-2); }
+.panel-box { border: 1px solid #E4DCCB; }
+.compare th, .compare td { border-bottom-color: var(--card-line); }
+.btn-outline { background: transparent; }
+.btn-outline:hover { background: var(--card); }
+
+/* Khung nhấn xanh đậm */
+.stat-cards .stat, .highlights .stat { background: var(--sea5); border: 0; box-shadow: 0 10px 24px rgba(27,84,80,.18); }
+.stat-cards .stat .stat-value, .highlights .stat .stat-value { background: var(--sea2); color: var(--sea5); }
+.stat-cards .stat .stat-label, .highlights .stat .stat-label { color: #DCEDEA; }
+.badge { background: var(--sea5); }
+
+/* BEACH: dải xanh biển nhạt → đậm (như brochure) */
+.beach-card.b-B { background: var(--sea1); } .beach-card.b-E { background: var(--sea2); } .beach-card.b-A { background: var(--sea3); }
+.beach-card.b-C { background: var(--sea4); color: #fff; } .beach-card.b-H { background: var(--sea5); color: #fff; }
+.beach-card { border: 2px solid transparent; box-shadow: 0 8px 22px rgba(31,59,56,.10); }
+.beach-card[aria-selected="true"] { border-color: var(--ink); box-shadow: 0 16px 30px rgba(31,59,56,.18); }
+.beach-card.b-C[aria-selected="true"], .beach-card.b-H[aria-selected="true"] { border-color: #F3EFE6; }
+.beach-card .bc-more { background: rgba(27,84,80,.12); color: var(--ink); }
+.beach-card.b-C .bc-more, .beach-card.b-H .bc-more { background: rgba(255,255,255,.18); color: #fff; }
+.beach-card[aria-selected="true"] .bc-more { background: var(--ink); color: #fff; }
+.beach-card.b-C[aria-selected="true"] .bc-more, .beach-card.b-H[aria-selected="true"] .bc-more { background: #F3EFE6; color: var(--sea5); }
+.b-B .letter, .letter.b-B, .beach-chips .b-B { background: var(--sea1); color: var(--ink); }
+.b-E .letter, .letter.b-E, .beach-chips .b-E { background: var(--sea2); color: var(--ink); }
+.b-A .letter, .letter.b-A, .beach-chips .b-A { background: var(--sea3); color: var(--ink); }
+.b-C .letter, .letter.b-C, .beach-chips .b-C { background: var(--sea4); color: #fff; }
+.b-H .letter, .letter.b-H, .beach-chips .b-H { background: var(--sea5); color: #fff; }
+.beach-panel.p-B { border-top-color: var(--sea1); } .beach-panel.p-E { border-top-color: var(--sea2); } .beach-panel.p-A { border-top-color: var(--sea3); }
+.beach-panel.p-C { border-top-color: var(--sea4); } .beach-panel.p-H { border-top-color: var(--sea5); }
+
+/* Chân trang xanh đậm làm điểm neo */
+.site-footer { background: var(--sea5); color: #DCEDEA; border-top: 0; }
+.site-footer strong, .site-footer b { color: #fff; }
+.site-footer a { color: #CFE7E4; }
+.site-footer a:hover { color: #fff; }
+.site-footer .muted { color: #BFDAD6; }
+.copyright { border-top-color: rgba(255,255,255,.15); color: #BFDAD6; }
+.site-footer .socials a { background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22); color: #fff; box-shadow: none; }
+.site-footer .socials svg { stroke: #CFE7E4; }
+.site-footer .socials a:hover { background: var(--sea2); color: var(--sea5); }
+.site-footer .socials a:hover svg { stroke: var(--sea5); }
+
+/* Mạng xã hội trong trang liên hệ */
+.socials.big a { background: var(--card); border: 1px solid var(--card-line); box-shadow: 0 4px 12px rgba(31,59,56,.06); }
+.contact-ico { background: var(--card); border: 1px solid var(--card-line); }
+
+@media (max-width: 1180px) { .main-nav { background: var(--bg); } }

@@ -55,7 +55,7 @@
   if (f) {
     f.outerHTML =
       '<footer class="site-footer"><div class="container footer-grid">' +
-      '<div><img class="footer-logo" src="assets/img/logo.png" alt="' + S.name + '"><p class="muted">' + S.slogan + '.</p></div>' +
+      '<div><img class="footer-logo" src="assets/img/logo-light.png" alt="' + S.name + '"><p class="muted">' + S.slogan + '.</p></div>' +
       '<address><strong>Thông tin trung tâm</strong>' +
       '<span><b>Hotline:</b> ' + S.hotlines.map(function (n) { return '<a href="' + tel(n) + '">' + n + '</a>'; }).join(' - ') + '</span>' +
       '<span><b>Địa chỉ:</b> <a href="' + S.mapUrl + '" target="_blank" rel="noopener">' + S.address + '</a></span>' +
