@@ -603,3 +603,9 @@ body { background: var(--bg); }
 .beach-panel.p-A .panel-box { background: #D4E8D0; } .beach-panel.p-C .panel-box { background: #CFE5F0; }
 .beach-panel.p-H .panel-box { background: #E5DAF1; }
 .beach-panel .panel-box { border-color: transparent; }
+
+/* Nền trang: trở lại xanh mint nhạt; khung chung dùng màu kem để tách khỏi nền */
+:root { --bg: #E3F1EF; --bg-2: #D3E9E6; --card: #F6F1E7; --card-2: #EDE6D8; --card-line: #E2D9C7; }
+body, .hero-text, .split-text, .contact-info { background: var(--bg); }
+.site-header { background: rgba(227,241,239,.95); border-bottom: 1px solid #CDE3E0; }
+@media (max-width: 1180px) { .main-nav { background: var(--bg); } }
