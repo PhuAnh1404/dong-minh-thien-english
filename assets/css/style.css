@@ -693,3 +693,11 @@ body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: #F6F1E7; border-color: #E4DACA; }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: #1B5450; color: #fff; }
 .why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #E4DACA; }
+
+/* Thay màu kem bằng màu trong palette người dùng gửi (#C4DFDF · #D2E9E9 · #135D66 · #77B0AA) */
+.student, .student.s80, .student.s75, .student.s70,
+.why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: #D2E9E9; border-color: #C4DFDF; box-shadow: 0 8px 22px rgba(19,93,102,.10); }
+.student .score, .student.s80 .score, .student.s75 .score, .student.s70 .score { background: #135D66; color: #fff; }
+.student .avatar, .student.s80 .avatar, .student.s75 .avatar, .student.s70 .avatar { background: #77B0AA; color: #fff; }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: #135D66; color: #fff; }
+.why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #B7D6D6; }
