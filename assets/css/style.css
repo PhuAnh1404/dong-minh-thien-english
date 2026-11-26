@@ -609,3 +609,28 @@ body { background: var(--bg); }
 body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .site-header { background: rgba(227,241,239,.95); border-bottom: 1px solid #CDE3E0; }
 @media (max-width: 1180px) { .main-nav { background: var(--bg); } }
+
+/* =========================================================
+   GỌN MÀU: cặp màu chung vàng pastel (số liệu) + xanh dương pastel (nội dung)
+   ========================================================= */
+/* BEACH: 5 khối bằng nhau, thẳng hàng, không nhô lên */
+.beach-cards { align-items: stretch; }
+.beach-card, .beach-card:hover, .beach-card[aria-selected="true"] { transform: none; border: 3px solid transparent; min-height: 200px; }
+.beach-card:hover { box-shadow: 0 14px 28px rgba(31,59,56,.16); }
+.beach-card[aria-selected="true"], .beach-card.b-C[aria-selected="true"], .beach-card.b-H[aria-selected="true"] { border-color: var(--ink); }
+
+/* Số liệu (cả trang Vì sao chọn & Thành tích): một màu vàng pastel */
+.stat-cards .stat, .highlights .stat,
+.stat-cards .stat:nth-child(n), .highlights .stat:nth-child(n) { background: var(--yl); border: 0; }
+.stat-cards .stat:nth-child(n) .stat-value, .highlights .stat:nth-child(n) .stat-value { background: var(--yl-d); color: var(--ink); }
+.stat-cards .stat:nth-child(n) .stat-label, .highlights .stat:nth-child(n) .stat-label { color: #3B4A47; }
+
+/* Thẻ học viên: một màu xanh dương pastel */
+.student, .student.s80, .student.s75, .student.s70 { background: var(--bl-t); border-color: #C9DFEB; }
+.student .score, .student.s80 .score, .student.s75 .score, .student.s70 .score { background: var(--bl-d); color: var(--ink); }
+.student .avatar, .student.s80 .avatar, .student.s75 .avatar, .student.s70 .avatar { background: var(--bl); color: var(--ink); }
+
+/* Vì sao chọn: hai khung nội dung cùng màu xanh dương pastel */
+.why-grid .card:nth-of-type(2), .why-grid .card:nth-of-type(3) { background: var(--bl-t); border-color: #C9DFEB; }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: var(--bl-d); color: var(--ink); }
+.why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #C2D8E3; }
