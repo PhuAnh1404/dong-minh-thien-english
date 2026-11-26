@@ -14,9 +14,11 @@
   var ICONS = {
     facebook: '<path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/>',
     tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.6 2.4 4.5 5 5"/>',
+    zalo: '<path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H11l-4 3v-3h-.5A2.5 2.5 0 0 1 4 14.5z"/><path d="M8 9h4l-4 4h4M14.5 9v4"/>',
+    youtube: '<rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5v5l4-2.5z"/>',
     threads: '<path d="M16.5 11.2c-.4-2.3-2-3.6-4.3-3.6-2.6 0-4.2 1.8-4.2 4.4s1.6 4.4 4.3 4.4c2.2 0 3.6-1.2 3.6-2.9 0-1.6-1.3-2.6-3.3-2.6-1.6 0-2.7.8-2.7 2 0 1 .8 1.7 2 1.7"/><path d="M19.5 12c0 5-3 8.5-7.5 8.5S4.5 17 4.5 12 7.5 3.5 12 3.5c3.6 0 6.1 2 7 5"/>'
   };
-  var SOCIALS = [['facebook', 'Facebook', S.facebook], ['tiktok', 'TikTok', S.tiktok], ['threads', 'Threads', S.threads]];
+  var SOCIALS = [['zalo', 'Zalo', S.zalo], ['facebook', 'Facebook', S.facebook], ['tiktok', 'TikTok', S.tiktok], ['youtube', 'YouTube', S.youtube], ['threads', 'Threads', S.threads]];
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function tel(n) { return 'tel:' + n.replace(/\s/g, ''); }
   function svg(k) { return '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[k] + '</svg>'; }
@@ -53,7 +55,7 @@
   if (f) {
     f.outerHTML =
       '<footer class="site-footer"><div class="container footer-grid">' +
-      '<div><img class="footer-logo" src="assets/img/logo.png" alt="' + S.name + '"><p class="muted">' + S.slogan + '. Chương trình học BEACH: Beginning · Enhancing · Advancing · Challenging · Healing.</p></div>' +
+      '<div><img class="footer-logo" src="assets/img/logo.png" alt="' + S.name + '"><p class="muted">' + S.slogan + '.</p></div>' +
       '<address><strong>Thông tin trung tâm</strong>' +
       '<span><b>Hotline:</b> ' + S.hotlines.map(function (n) { return '<a href="' + tel(n) + '">' + n + '</a>'; }).join(' - ') + '</span>' +
       '<span><b>Địa chỉ:</b> <a href="' + S.mapUrl + '" target="_blank" rel="noopener">' + S.address + '</a></span>' +

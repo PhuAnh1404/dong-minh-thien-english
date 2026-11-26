@@ -12,6 +12,8 @@ window.SITE = {
   facebook: 'https://facebook.com/dongminhthienenglish',
   threads: 'https://www.threads.com/@dmt_eng',
   tiktok: 'https://www.tiktok.com/@dongminhthienenglish',
+  zalo: 'https://zalo.me/0909458918',
+  youtube: 'https://www.youtube.com/@dongminhthienenglish',
   /* Trang đăng ký nằm ngay trên web (form Tally được nhúng bên trong) */
   formTuVan: 'tu-van.html',
   formTest: 'test-trinh-do.html',
@@ -54,7 +56,7 @@ window.COURSES = [
     letter: 'C', name: 'CHALLENGING', short: 'Khóa ngắn hạn',
     desc: 'Khóa ngắn hạn: Tiếng Anh chuyên ngành và Tiếng Anh thương mại',
     forWho: 'Bạn đi làm hoặc học chuyên ngành, cần một khóa ngắn hạn để dùng tiếng Anh cho mục tiêu cụ thể.',
-    learn: ['Khóa ngắn hạn Tiếng Anh chuyên ngành theo lĩnh vực của bạn', 'Khóa ngắn hạn Tiếng Anh thương mại cho môi trường công việc', 'Các khóa ngắn hạn khác thiết kế theo nhu cầu'],
+    learn: ['Khóa ngắn hạn Tiếng Anh chuyên ngành theo lĩnh vực của bạn', 'Khóa ngắn hạn Tiếng Anh thương mại cho môi trường công việc', 'Các khóa ngắn hạn khác'],
     how: ['Nội dung bám sát công việc thực tế', 'Thời lượng ngắn hạn, tập trung đúng mục tiêu', 'Hỗ trợ tư vấn hướng nghiệp']
   },
   {
