@@ -714,3 +714,9 @@ body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .student .avatar, .student.s80 .avatar, .student.s75 .avatar, .student.s70 .avatar { background: #77B0AA; color: #fff; }
 .why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: #135D66; color: #fff; }
 .why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #E6E2DC; }
+
+/* Màu nhấn số liệu & điểm: xanh đậm thương hiệu #1B5450 */
+.stat-cards .stat:nth-child(n), .highlights .stat:nth-child(n) { background: #1B5450; }
+.stat-cards .stat:nth-child(n) .stat-value, .highlights .stat:nth-child(n) .stat-value { color: #1B5450; }
+.student .score, .student.s80 .score, .student.s75 .score, .student.s70 .score,
+.why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: #1B5450; }
