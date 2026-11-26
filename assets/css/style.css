@@ -363,3 +363,10 @@ p { margin: 0; text-wrap: pretty; }
   .why-page .compare { height: 100%; }
   .why-page .compare th { font-size: 18.5px; }
 }
+
+/* Vì sao chọn: ô số liệu ôm sát nội dung */
+@media (min-width: 1181px) {
+  .why-page .stat-cards { height: auto; grid-template-rows: none; align-content: start; align-self: start; }
+  .why-page .stat-cards .stat { justify-content: flex-start; min-height: 0; padding: 22px 22px 24px; gap: 10px; }
+}
+.why-grid .stat-cards .stat { min-height: 0; }
