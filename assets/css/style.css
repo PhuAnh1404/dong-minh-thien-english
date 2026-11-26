@@ -7,9 +7,10 @@
   --bg: #E3F1EF;
   --bg-2: #D3E9E6;
   --ink: #1F4542;
-  --card: #F4FAF9;
-  --muted: #4A6462;
-  --line: #DCEBEA;
+  --card: #CBE5E2;
+  --card-2: #B8DBD7;
+  --muted: #3D5856;
+  --line: #A9CFCB;
   --ok: #1E7A4F;
   --no: #B4442F;
   --b: #BFE3E1; --e: #9AD0CD; --a: #6FB5B2; --c: #2F7D79; --h: #1B5450;
@@ -375,3 +376,39 @@ p { margin: 0; text-wrap: pretty; }
 .socials a, .socials.big a { background: var(--mint); color: var(--ink); border: 1px solid #8FC2C0; box-shadow: 0 4px 12px rgba(27,84,80,.14); font-weight: 700; transition: background .15s, color .15s, transform .15s; }
 .socials a:hover, .socials.big a:hover { background: var(--dark); color: #fff; transform: translateY(-2px); }
 .socials a:hover svg { stroke: #fff; }
+
+/* =========================================================
+   BỘ MÀU ĐỒNG BỘ (thay khung trắng): mint · mint đậm · xanh đậm
+   ========================================================= */
+.card, .student, .teacher, .cred-grid li, .tile, .beach-panel, .highlight { background: var(--card); box-shadow: 0 10px 26px rgba(27,84,80,.10); }
+.panel-box, .chips span, .avatar, .socials.big a { background: var(--card-2); }
+.student .avatar { background: var(--card-2); }
+
+/* Khung nhấn: xanh đậm, chữ sáng */
+.stat-cards .stat, .highlights .stat { background: var(--dark); box-shadow: 0 12px 28px rgba(27,84,80,.22); }
+.stat-cards .stat .stat-value, .highlights .stat .stat-value { background: var(--mint); color: var(--dark); border-radius: 12px; padding: 2px 14px; align-self: flex-start; }
+.stat-cards .stat .stat-label, .highlights .stat .stat-label { color: #D5ECEA; }
+
+/* Thẻ thành tích trên ảnh thầy Thiện */
+.badge { background: var(--dark); box-shadow: 0 12px 28px rgba(15,54,51,.28); }
+.badge strong { color: #fff; }
+.badge span { color: #CFE7E4; }
+
+/* Số thứ tự & bảng so sánh */
+.num { background: var(--dark); color: #fff; }
+.compare th, .compare td { border-bottom-color: var(--line); }
+
+/* Thẻ giảng viên */
+.teacher.simple .avatar-lg { background: var(--mint); }
+.role.sub { background: var(--card-2); }
+
+/* Ô liên hệ & trang liên hệ */
+.contact-ico { background: var(--card); }
+.cta-card.white { background: var(--card); }
+
+/* Nút "Xem chi tiết" trên khối BEACH */
+.bc-more { background: rgba(27,84,80,.14); }
+
+/* Viền ô BEACH theo màu khóa */
+.beach-panel { border-top-width: 8px; }
+@media (min-width: 1181px) { .why-grid { grid-template-columns: minmax(300px, .9fr) minmax(0, 1.3fr) minmax(320px, 1fr); } }
