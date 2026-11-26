@@ -370,3 +370,8 @@ p { margin: 0; text-wrap: pretty; }
   .why-page .stat-cards .stat { justify-content: flex-start; min-height: 0; padding: 22px 22px 24px; gap: 10px; }
 }
 .why-grid .stat-cards .stat { min-height: 0; }
+
+/* Nút mạng xã hội nổi rõ trên nền */
+.socials a, .socials.big a { background: var(--mint); color: var(--ink); border: 1px solid #8FC2C0; box-shadow: 0 4px 12px rgba(27,84,80,.14); font-weight: 700; transition: background .15s, color .15s, transform .15s; }
+.socials a:hover, .socials.big a:hover { background: var(--dark); color: #fff; transform: translateY(-2px); }
+.socials a:hover svg { stroke: #fff; }
