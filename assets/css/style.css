@@ -720,3 +720,29 @@ body, .hero-text, .split-text, .contact-info { background: var(--bg); }
 .stat-cards .stat:nth-child(n) .stat-value, .highlights .stat:nth-child(n) .stat-value { color: #1B5450; }
 .student .score, .student.s80 .score, .student.s75 .score, .student.s70 .score,
 .why-grid .card:nth-of-type(2) .scl li:nth-child(n) .num { background: #1B5450; }
+
+/* =========================================================
+   Đồng bộ với trang Vì sao chọn: nhấn xanh đậm #1B5450, khung trắng ngà #F8F6F4
+   (trang Thầy Thiện, Giảng viên, Liên hệ)
+   ========================================================= */
+/* Thầy Thiện: 3 ô số giống ô số liệu */
+.tile { background: #1B5450; border: 0; box-shadow: 0 10px 24px rgba(27,84,80,.18); }
+.tile b { display: inline-block; background: #E3FEF7; color: #1B5450; border-radius: 12px; padding: 2px 14px; margin-bottom: 8px; }
+.tile span { display: block; color: #E3FEF7; }
+/* Khung thông tin trắng ngà */
+.cred-grid li, .teacher, .teacher.simple, .card,
+.contact-ico, .socials.big a, .cta-card.white { background: #F8F6F4; border: 1px solid #E6E2DC; box-shadow: 0 8px 22px rgba(27,84,80,.08); }
+.cred-grid .ico { stroke: #1B5450; }
+.teacher .checks .ico { stroke: #1B5450; }
+.role.sub { background: #1B5450; color: #fff; }
+.avatar-lg { background: #77B0AA; color: #fff; }
+.teacher-photo { background: #A6D0CF; }
+.contact-ico svg { stroke: #1B5450; }
+.socials.big a { color: #1F3B38; }
+.socials.big a:hover { background: #1B5450; color: #fff; }
+.cta-card.mint { background: #A6D0CF; }
+@media (max-width: 520px) {
+  .tile { padding: 14px 10px; min-width: 0; }
+  .tile b { font-size: 20px; padding: 2px 8px; }
+  .tile span { font-size: 12px; overflow-wrap: anywhere; }
+}
