@@ -43,7 +43,7 @@ window.COURSES = [
     desc: 'Tiếng Anh cơ bản – nâng cao – học thuật',
     forWho: 'Bạn đã có nền cơ bản, muốn nâng lên trình độ cao hơn và làm quen tiếng Anh học thuật.',
     learn: ['Nâng cấp ngữ pháp và từ vựng lên trình độ cao', 'Tiếng Anh học thuật: đọc hiểu và viết luận', 'Tư duy ngôn ngữ: chuyển từ người học sang người sử dụng'],
-    how: ['Thực hành nói và viết thường xuyên', 'Luyện tư duy logic qua từng bài học', 'Nhận phản hồi trực tiếp từ giảng viên']
+    how: ['Thực hành nói và viết thường xuyên', 'Luyện tư duy logic qua từng bài học', 'Nhận phản hồi trực tiếp từ giáo viên']
   },
   {
     letter: 'A', name: 'ADVANCING', short: 'Luyện thi IELTS',

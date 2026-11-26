@@ -5,7 +5,7 @@
     ['beach.html', 'Chương trình BEACH'],
     ['thay-thien.html', 'Thầy Thiện'],
     ['vi-sao-chon.html', 'Vì sao chọn'],
-    ['giang-vien.html', 'Giảng viên'],
+    ['giang-vien.html', 'Giáo viên'],
     ['thanh-tich.html', 'Thành tích'],
     ['lien-he.html', 'Liên hệ']
   ];
