@@ -544,3 +544,47 @@ body { background: var(--bg); }
 .beach-panel.p-B { border-top-color: var(--cB); } .beach-panel.p-E { border-top-color: var(--cE); } .beach-panel.p-A { border-top-color: var(--cA); }
 .beach-panel.p-C { border-top-color: var(--cC); } .beach-panel.p-H { border-top-color: var(--cH); }
 .beach-panel { border-top-width: 8px; border-top-style: solid; }
+
+/* =========================================================
+   Vì sao chọn & Thành tích: dùng bộ pastel BEACH
+   ========================================================= */
+:root {
+  --pk: #F2C3BA; --pk-d: #E7A396; --pk-t: #FAE7E2;   /* hồng  */
+  --yl: #F3DDA6; --yl-d: #E9C772; --yl-t: #FAF1DA;   /* vàng  */
+  --gr: #C3DFBE; --gr-d: #A3CC9B; --gr-t: #E6F1E3;   /* xanh lá */
+  --bl: #BCDCEB; --bl-d: #94C4DC; --bl-t: #E2EFF6;   /* xanh dương */
+  --pu: #DBCBEC; --pu-d: #C3AAE0; --pu-t: #EFE7F7;   /* tím */
+}
+/* 4 ô số liệu */
+.stat-cards .stat, .highlights .stat { box-shadow: 0 8px 22px rgba(31,59,56,.08); border: 0; }
+.stat-cards .stat:nth-child(1), .highlights .stat:nth-child(1) { background: var(--pk); }
+.stat-cards .stat:nth-child(2), .highlights .stat:nth-child(2) { background: var(--yl); }
+.stat-cards .stat:nth-child(3), .highlights .stat:nth-child(3) { background: var(--gr); }
+.stat-cards .stat:nth-child(4), .highlights .stat:nth-child(4) { background: var(--bl); }
+.stat-cards .stat:nth-child(1) .stat-value, .highlights .stat:nth-child(1) .stat-value { background: var(--pk-d); color: var(--ink); }
+.stat-cards .stat:nth-child(2) .stat-value, .highlights .stat:nth-child(2) .stat-value { background: var(--yl-d); color: var(--ink); }
+.stat-cards .stat:nth-child(3) .stat-value, .highlights .stat:nth-child(3) .stat-value { background: var(--gr-d); color: var(--ink); }
+.stat-cards .stat:nth-child(4) .stat-value, .highlights .stat:nth-child(4) .stat-value { background: var(--bl-d); color: var(--ink); }
+.stat-cards .stat .stat-label, .highlights .stat .stat-label,
+.stat-cards .stat:nth-child(n) .stat-label, .highlights .stat:nth-child(n) .stat-label { color: #2E4744; }
+
+/* Hai khung trang Vì sao chọn */
+.why-grid .card:nth-of-type(2) { background: var(--pu-t); border-color: #DDD0EC; }
+.why-grid .card:nth-of-type(3) { background: var(--gr-t); border-color: #CFE3CA; }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(1) .num { background: var(--pk-d); color: var(--ink); }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(2) .num { background: var(--yl-d); color: var(--ink); }
+.why-grid .card:nth-of-type(2) .scl li:nth-child(3) .num { background: var(--bl-d); color: var(--ink); }
+.why-grid .card:nth-of-type(3) .compare th, .why-grid .card:nth-of-type(3) .compare td { border-bottom-color: #C7DDC1; }
+.why-grid .card:nth-of-type(3) .compare .val { color: var(--ink); }
+
+/* Thẻ học viên theo điểm */
+.student.s80 { background: var(--yl-t); border-color: #EEDDB0; }
+.student.s75 { background: var(--pk-t); border-color: #EFCFC7; }
+.student.s70 { background: var(--bl-t); border-color: #C9DFEB; }
+.student.s80 .score { background: var(--yl-d); color: var(--ink); }
+.student.s75 .score { background: var(--pk-d); color: var(--ink); }
+.student.s70 .score { background: var(--bl-d); color: var(--ink); }
+.student .score small { opacity: .75; }
+.student.s80 .avatar { background: var(--yl); color: var(--ink); }
+.student.s75 .avatar { background: var(--pk); color: var(--ink); }
+.student.s70 .avatar { background: var(--bl); color: var(--ink); }
